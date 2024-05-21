@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -35,532 +36,609 @@
 </head>
 
 <body class="font-body text-white flex overflow-hidden h-screen">
-    <aside class="w-[220px] bg-black21 shrink-0 grid grid-row:auto overflow-y-auto overflow-hidden">
-        <div class="grid px-[20px] py-[16px] ">
-            <figure class="flex  mb-[28px]">
-                <button class="mr-[20px] size-[22px] inline-flex items-center justify-center"><img src="assets/img/bar.svg" alt=""></button>
-                <button><img src="assets/img/Youtube logo.svg" alt=""></button>
-            </figure>
+    <aside
+        class="w-[220px] peer  bg-black21 group has-[:checked]:block has-[:checked]:w-[55px] has-[:checked]:transition-all has-[:checked]:pr-0 shrink-0 pr-[20px] overflow-y-auto overflow-hidden">
+        <input type="checkbox" id="menuBar" class="hidden">
+        <div class="flex items-center px-[20px] py-[16px] mb-[12px]">
+            <label for="menuBar"
+                class="size-[22px] cursor-pointer text-[22px] inline-flex shrink-0 items-center justify-center mr-[18px]"><img
+                    src="assets/img/bar.svg" alt=""></label>
+            <a href="#">
+                <figure>
+                    <button><img src="assets/img/Youtube logo.svg" alt=""></button>
+                </figure>
+            </a>
         </div>
-        <div class="grid  w-[200px] mb-8">
-            <div class="flex h-[34px]  p-2  bg-black32 ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/home.svg" alt=""></button>
-                <span class="text-[14px]">Home</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/explore.svg" alt=""></button>
-                <span class="text-[14px]">Explores</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2   ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/home.svg" alt=""></button>
-                <span class="text-[14px]">Shorts</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/explore.svg" alt=""></button>
-                <span class="text-[14px]">Subscriptions</span>
-                </div>
-            </div>
+        <div class="">
+            <a class=" flex items-center h-[34px]  has-[:checked]:wrap  py-[5px]  hover:bg-black32 pl-[20px]  bg-black32">
+                <img class=" text-[22px] mr-[20px] shrink-0 size-[20px] inline-flex" src="assets/img/home.svg" alt="">
+                <span
+                    class="text-[14px]  whitespace-nowrap transition-all duration-300 peer-hover:block peer-hover:bg-white ">Home</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class="text-[22px] size-[20px] shrink-0  mr-[20px] inline-flex" src="assets/img/explore.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Explores</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/short.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Shorts</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/subs.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Subscriptions</span>
+            </a>
         </div>
-        <hr class="w-[200px]  border-black32">
-        <div class="grid  w-[200px] mb-8">
-            <div class="flex h-[34px]  p-2 mt-5  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/library.svg" alt=""></button>
-                <span class="text-[14px]">Library</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/history.svg" alt=""></button>
-                <span class="text-[14px]">History</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2   ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/home.svg" alt=""></button>
-                <span class="text-[14px]">Your videos</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/explore.svg" alt=""></button>
-                <span class="text-[14px]">Watch later</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/library.svg" alt=""></button>
-                <span class="text-[14px]">Liked videos</span>
-                </div>
-            </div>
-            <div class="flex h-[34px]  p-2  ">
-                <div class="ml-3 flex justify-between">
-                    <button class="size-[18px] mr-4"><img src="assets/img/history.svg" alt=""></button>
-                <span class="text-[14px]">Show more</span>
-                </div>
-            </div>
         </div>
-        <hr class="w-[200px]  border-black32">
-        <div class="grid grid-row ">
-            <article class="px-[20px] py-[16px]">
-                <h2 class="decoration-gray-200">SUBSCRIPTIONS</h2>
+        <hr class="my-[16px] border-black32">
+        <div>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px] ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/library.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Library</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/history.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">History</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/short.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Your videos</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/subs.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Watch later</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/home.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Liked videos</span>
+            </a>
+            <a class=" flex items-center h-[34px]  py-[5px] hover:bg-black32 pl-[20px]  ">
+                <img class=" text-[22px] size-[20px] shrink-0 mr-[20px] inline-flex" src="assets/img/down.svg" alt="">
+                <span class="text-[14px]  whitespace-nowrap">Show more</span>
+            </a>
+        </div>
+        <hr class="my-[16px]  border-black32">
+        <div class=" group-has-[:checked]:hidden">
+            <article class="px-[20px] mb-[8px]">
+                <h3 class="decoration-gray-200 text-[13px] text-grayaa">SUBSCRIPTIONS</h3>
             </article>
-            <div class="grid  w-[200px] mb-8">
-                <div class="flex h-[34px]  p-2  relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy.svg" alt=""></button>
-                    <span class="text-[12px]">Nadir On The Go</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2 relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy2.svg" alt=""></button>
-                    <span class="text-[12px]">Coke Studio Bangla</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2  relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy.svg" alt=""></button>
-                    <span class="text-[12px]">MKBHD</span>
-                    
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2  relative">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/figma.svg" alt=""></button>
-                    <span class="text-[12px]">Figma</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2 relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy2.svg" alt=""></button>
-                    <span class="text-[12px] overflow-hidden text-ellipse">ATC Android ToTo C...</span>
-                   
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2  relative">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy.svg" alt=""></button>
-                    <span class="text-[12px]">Alux.com</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2  relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/figma.svg" alt=""></button>
-                    <span class="text-[12px]">Nadir On The Go</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2  relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy.svg" alt=""></button>
-                    <span class="text-[12px]">Nadir On The Go</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="flex h-[34px]  p-2  relative ">
-                    <div class="ml-3 flex justify-between">
-                        <button class="size-[22px] mr-4"><img src="assets/img/boy2.svg" alt=""></button>
-                    <span class="text-[12px]">Nadir On The Go</span>
-                    <button class="absolute right-[21px] top-[14px]"><img src="assets/img/dot.svg" alt=""></button>
-                    </div>
-                </div>
+            <div class="grid  mb-8">
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/boy.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Nadir On The Go</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/Ellipse 1.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Coke Studio Bangla</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/boy2.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">MKBHD</span>
+
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/figma.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Figma</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/Ellipse 1.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden whitespace-nowrap text-ellipsis inline">ATC Android ToTo            C</span>
+
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/boy.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Alux.com</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/Ellipse 1.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Nadir On The Go</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/boy2.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Nadir On The Go</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/figma.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Nadir On The Go</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
+                <a class="flex h-[32px] px-[20px] items-center  p-2  relative ">
+                    <button class="size-[22px] shrink-0 mr-[20px] overflow-hidden rounded-full"><img
+                            class="size-full object-cover" src="assets/img/boy.svg" alt=""></button>
+                    <span class="text-[12px] overflow-hidden text-ellipsis inline">Nadir On The Go</span>
+                    <span class="absolute m-auto size-[4px] right-[12px] top-[14px]"><img src="assets/img/dot.svg"
+                            alt=""></span>
+                </a>
             </div>
         </div>
     </aside>
     <main class="w-[calc(100%_-_220px)] bg-black18  flex-1 pl-[14px]">
         <div class="flex justify-between px-[32px] py-[16px] border-b border-black32">
             <div class="flex-1 flex justify-center">
-                <div  class="w-[534px] border border-black32 flex items-center">
-                    <input type="text" name="" id="" class="h-[36px] outline-none flex-1 px-[6px] py-[10px] bg-transparent" placeholder="search...">
-                    <span class="inline-flex w-[56px] h-[36px] bg-black21 items-center px-[16px] py-[6px] mr-[8px]"><img src="assets/img/search.svg" alt=""></span>
-                    <span class="px-[12px] py-[9px]"><img src="assets/img/mic.svg" alt=""></span>
+                <div class="w-[534px]  flex items-center">
+                    <input type="text" name="" id=""
+                        class="h-[36px] border border-black32 outline-none flex-1 px-[6px] py-[10px] bg-transparent"
+                        placeholder="search...">
+                    <span class="inline-flex w-[56px] h-[36px] bg-black21 items-center px-[16px] py-[6px] mr-[8px]"><img
+                            src="assets/img/search.svg" class="size-full object-cover rounded-full" alt=""></span>
+                    <span class=" px-[12px] py-[9px]"><img src="assets/img/mic.svg" alt=""></span>
                 </div>
 
             </div>
-            <div class="flex space-x-[20px]">
-                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/video.svg" alt=""></button>
-                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/history.svg" alt=""></button>
-                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/library.svg" alt=""></button>
-                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/boy.svg" alt=""></button>
+            <div class="flex space-x-[20px] items-center">
+                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/video.svg"
+                        alt=""></button>
+                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/history.svg"
+                        alt=""></button>
+                <button class="size-[28px] flex items-center justify-center"><img src="assets/img/library.svg" alt="">
+                </button>
+
+                <div class="relative">
+                    <!-- Hidden checkbox to control the dropdown -->
+                    <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+                    <!-- Label to act as the button -->
+                    <label for="menu-toggle" class="flex items-center justify-center cursor-pointer ">
+                        <img class=" object-cover rounded-full size-[28px]" src="assets/img/boy.svg" alt="">
+
+                    </label>
+
+                    <!-- Dropdown content -->
+                    <div
+                        class="absolute right-0 mt-2 w-[260px] bg-black32 border border-gray-200 rounded-md shadow-lg hidden peer-checked:block">
+                        <a href="#" class="flex text-white py-2 px-4 block text-[12px] hover:bg-black"> <img
+                                src="assets/img/boy.svg" class=" object-cover rounded-full mr-[19px] size-[45px] mt-[7px]" alt="">
+                            <div class="grid "> <span>
+                                    Name Surname
+                                </span>
+                                <span>
+                                    @johnnick.19
+                                </span>
+                                <span class="mt-[7px] text-sky-500 text-[14px]">Hesabinizi goruntuleyin</span>
+                            </div>
+                            
+
+                        </a>
+                        <hr class="my-[8px]  border-gray-500">
+                        <a href="#" class="block px-4 text-white py-2 text-[12px]  hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Google Hesabı</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-regular fa-user mr-[8px]"></i> Hesap değiştir</a>
+                        <a href="#" class="block px-4 py-2 text-[13px]  text-white hover:bg-black"><i
+                                class="fa-solid fa-share-from-square mr-[8px]"></i> Oturumu kapat</a>
+                        <hr class="my-[8px]  border-gray-500">
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> YouTube Studio</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Satın alınanlar ve
+                            üyelikler</a>
+                        <hr class="my-[8px]  border-gray-500">
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> YouTube'daki verileriniz</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Görünüm: Cihaz teması</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Dil: Türkçe</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Kısıtlı Mod: Kapalı</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Konum: Azerbaycan</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Klavye kısayolları</a>
+                        <hr class="my-[8px]  border-gray-500">
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Ayarlar</a>
+                        <hr class="my-[8px]  border-gray-500">
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Yardım</a>
+                        <a href="#" class="block px-4 py-2  text-white text-[12px] hover:bg-black"><i
+                                class="fa-brands fa-google mr-[8px]"></i> Geri bildirim gönder</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="py-[10px] flex space-x-[12px] overflow-y-auto border-b border-black32  mb-[20px]">
-            <button class="whitespace-nowrap h-[30px] text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">All</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Cook Studio</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">UX</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Case Study</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Music</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Bnagla Lofi</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tour</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tech</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Saintmartin</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">iPhone 13</button>
-            <button class="h-[30px]  whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">User Interface Design</button>
-            <button class="h-[30px]  whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Bnagla Lofi</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tour</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tech</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Bnagla Lofi</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tour</button>
-            <button class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tech</button>
+            <button
+                class="whitespace-nowrap h-[30px] text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32  border bg-white text-black">All</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Cook
+                Studio</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">UX</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Case
+                Study</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Music</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Bnagla
+                Lofi</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tour</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tech</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Saintmartin</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">iPhone
+                13</button>
+            <button
+                class="h-[30px]  whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">User
+                Interface Design</button>
+            <button
+                class="h-[30px]  whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Bnagla
+                Lofi</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tour</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tech</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">Bnagla
+                Lofi</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tour</button>
+            <button
+                class="h-[30px] whitespace-nowrap text-[12px] rounded-full inline-flex items-center px-[12px] bg-black32 text-white border border-black47">tech</button>
         </div>
 
-        <div class="mt-[10px] pr-[14px] overflow-y-auto p-x-[12px] items-center p-y-[20px] grid grid-row h-[calc(100vh_-_110px)]">
-                <div class="grid grid-cols-4 gap-x-[14px] w-full" style="grid-template-columns: repeat(4, 242px);">
-                    <article class=" h-[219px] grid grid-row-auto ">
-                        <div>
-                            <img src="assets/img/Thumbnail.svg" alt="">
+        <div class="mt-[10px] overflow-y-auto px-[12px] items-center grid  h-[calc(100vh_-_200px)]">
+            <div class="grid grid-cols-4 gap-x-[14px] ">
+                <article class=" h-[219px] grid grid-row-auto mb-[80px] ">
+                    <div>
+                        <img class="w-[100%]" src="assets/img/Thumbnail.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] size-full object-cover rounded-full h-[39px]"
+                                src="assets/img/Ellipse 1.svg" alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class="leading-4 h-[34px] tracking-tight text-[13px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail1.svg" alt="">
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row mb-[80px]">
+                    <div>
+                        <img class="w-[100%]" src="assets/img/Thumbnail1.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full"
+                                src="assets/img/Thumbnail.svg" alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class="leading-4 h-[34px] tracking-tight text-[13px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
                                 </div>
                             </div>
                         </div>
-                    </article>
-                     <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail2.svg" alt="">
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row mb-[80px]">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail2.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full"
+                                src="assets/img/Thumbnail3.svg" alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class="tracking-tight leading-4 h-[34px] text-[13px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail3.svg" alt="">
-                        </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row mb-[80px] ">
+                    <div class="relative">
+                        <img class="w-[100%] " src="assets/img/Thumbnail3.svg" alt="">
+                        <img src="assets/img/Rectangle 8.svg" class="absolute top-[145px] left-0 w-[305px]" alt="">
+                        <img src="assets/img/play2.svg" class="absolute top-[145px] left-[144px] size-[24px]" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        
+                        <div class="grid ">
+                            <h2 class=" tracking-tight leading-4 h-[17px] text-[14px]">My Mix</h2>
+
+                            <div class="mt-[1px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa mr-1 text-[12px]">Lopamudra Mitra, Anupam Roy, and more</span>
+                                    
+                                </div>
+                               
                             </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="grid grid-cols-4 gap-x-[14px] w-full">
+                <article class=" h-[219px] grid grid-row-auto ">
+                    <div>
+                        <img class="w-[100%]" src="assets/img/Thumbnail.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/boy2.svg"
+                                alt="">
+                        </div>
+                        <div class="grid grid-row">
+                            <h2 class=" tracking-tight leading-4 h-[34px] text-[13px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-                <div class="grid grid-cols-4 gap-x-[14px] w-full" style="grid-template-columns: repeat(4, 242px);">
-                    <article class=" h-[219px] grid grid-row-auto ">
-                        <div>
-                            <img src="assets/img/Thumbnail.svg" alt="">
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row ">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail1.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/figma.svg"
+                                alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class="tracking-tight leading-4 h-[34px] text-[13px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
                                 </div>
-                            </div>
-                    
-                        </div>
-    
-    
-                    </article>
-                    <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail1.svg" alt="">
-                        </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
-                                </div>
-                            </div>
-                    
-                        </div>
-    
-    
-                    </article>
-                     <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail2.svg" alt="">
-                        </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail3.svg" alt="">
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row mb-[80px]">
+                    <div>
+                        <img class="w-[100%]" src="assets/img/Thumbnail2.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/boy.svg"
+                                alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class="tracking-tight leading-4 h-[34px] text-[13px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-                <div class="grid grid-cols-4 gap-x-[14px] w-full" style="grid-template-columns: repeat(4, 242px);">
-                    <article class=" h-[219px] grid grid-row-auto ">
-                        <div>
-                            <img src="assets/img/Thumbnail.svg" alt="">
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row ">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail3.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/boy2.svg"
+                                alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class=" tracking-tight text-[13px] leading-4 h-[34px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
                                 </div>
-                            </div>
-                    
-                        </div>
-    
-    
-                    </article>
-                    <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail1.svg" alt="">
-                        </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
-                                </div>
-                            </div>
-                    
-                        </div>
-    
-    
-                    </article>
-                     <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail2.svg" alt="">
-                        </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <article class=" h-[219px] grid grid-row ">
-                        <div>
-                            <img src="assets/img/Thumbnail3.svg" alt="">
+                    </div>
+                </article>
+            </div>
+            <div class="grid grid-cols-4 gap-x-[14px] w-full">
+                <article class=" h-[219px] grid grid-row-auto ">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] size-full object-cover rounded-full h-[39px]" src="assets/img/boy.svg"
+                                alt="">
                         </div>
-                        <div class="flex mt-[10px]">
-                            <div class=" mr-[10px]">
-                                <img class="w-[70px] h-[39px]" src="assets/img/boy.svg" alt="">
-                            </div>
-                            <div class="grid grid-row">
-                                <h2 class="h-[34px] mb-[6px] tracking-tight text-[14px]">Bulbuli | Coke Studio Bangla |
-                                    Season One | Ritu Raj X Nandita</h2>
-    
-                                <div class="mt-[7px]">
-                                    <div class="flex align-middle">
-                                        <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
-                                        <img src="assets/img/verified.svg" alt="">
-                                    </div>  
-                                    <div class="flex space-x-1">
-                                        <span class="text-grayaa text-[12px]">1.5 M views</span>
-                                        <img class="text-grayaa" src="assets/img/dot.svg" alt="">
-                                        <span class="text-grayaa text-[12px]">2 days ago</span>
-        
-                                    </div> 
+                        <div class="grid grid-row">
+                            <h2 class=" tracking-tight text-[13px] leading-4 h-[34px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-                
-                </div>
-            
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row ">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail1.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/boy.svg"
+                                alt="">
+                        </div>
+                        <div class="grid grid-row">
+                            <h2 class=" tracking-tight text-[13px] leading-4 h-[34px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row ">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail2.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/boy.svg"
+                                alt="">
+                        </div>
+                        <div class="grid grid-row">
+                            <h2 class=" tracking-tight text-[13px] leading-4 h-[34px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa text-[12px] mr-1">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class=" h-[219px] grid grid-row ">
+                    <div>
+                        <img class="w-[100%] " src="assets/img/Thumbnail3.svg" alt="">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div class=" mr-[10px]">
+                            <img class="w-[50px] h-[39px] size-full object-cover rounded-full" src="assets/img/boy.svg"
+                                alt="">
+                        </div>
+                        <div class="grid grid-row">
+                            <h2 class=" tracking-tight text-[13px] leading-4 h-[34px]">Bulbuli | Coke Studio Bangla |
+                                Season One | Ritu Raj X Nandita</h2>
+
+                            <div class="mt-[7px]">
+                                <div class="flex align-middle">
+                                    <span class="text-grayaa mr-1 text-[12px]">Coke Studio Bangla</span>
+                                    <img src="assets/img/verified.svg" alt="">
+                                </div>
+                                <div class="flex space-x-1">
+                                    <span class="text-grayaa text-[12px]">1.5 M views</span>
+                                    <img class="text-grayaa" src="assets/img/Ellipse 5.svg" alt="">
+                                    <span class="text-grayaa text-[12px]">2 days ago</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+
         </div>
     </main>
 
